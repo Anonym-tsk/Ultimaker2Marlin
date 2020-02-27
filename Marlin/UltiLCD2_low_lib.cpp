@@ -824,7 +824,7 @@ char* int_to_time_string(unsigned long i, char* temp_buffer)
     uint8_t secs = i % 60;
 
     if (hours > 0)
-    {
+   /*  {
         if (hours > 99)
             *c++ = '0' + hours / 100;
         if (hours > 9)
@@ -851,7 +851,7 @@ char* int_to_time_string(unsigned long i, char* temp_buffer)
     *c++ = '0' + secs % 10;
     strcpy_P(c, PSTR(" sec"));
     return c + 4;
-    /*
+    */
     if (hours > 99)
         *c++ = '0' + hours / 100;
     *c++ = '0' + (hours / 10) % 10;
@@ -864,7 +864,7 @@ char* int_to_time_string(unsigned long i, char* temp_buffer)
     *c++ = '0' + secs % 10;
     *c = '\0';
     return c;
-    */
+
 }
 
 char* float_to_string(float f, char* temp_buffer, const char* p_postfix)

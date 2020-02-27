@@ -3,6 +3,11 @@ Marlin 3D Printer Firmware
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ErikZalm&url=https://github.com/ErikZalm/Marlin&title=Marlin&language=&tags=github&category=software)
 
+Alekmaker 2+ fork
+-----------------
+
+http://alekmaker.ru/2016/06/11/alekmaker-2-more-bolt-dont-miss/
+
 Quick Information
 ===================
 This RepRap firmware is a mashup between <a href="https://github.com/kliment/Sprinter">Sprinter</a>, <a href="https://github.com/simen/grbl/tree">grbl</a> and many original parts.

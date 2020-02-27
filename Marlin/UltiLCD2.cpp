@@ -146,18 +146,18 @@ void lcd_menu_startup()
     LED_GLOW();
     lcd_lib_clear();
 
-    if (led_glow < 84)
-    {
-        lcd_lib_draw_gfx(0, 22, ultimakerTextGfx);
-        for(uint8_t n=0;n<10;n++)
-        {
-            if (led_glow*2 >= n + 20)
-                lcd_lib_clear(0, 22+n*2, led_glow*2-n-20, 23+n*2);
-            if (led_glow*2 >= n)
-                lcd_lib_clear(led_glow*2 - n, 22+n*2, 127, 23+n*2);
-            else
-                lcd_lib_clear(0, 22+n*2, 127, 23+n*2);
-        }
+    //if (led_glow < 84)
+    //{
+    //    lcd_lib_draw_gfx(0, 22, ultimakerTextGfx);
+    //    for(uint8_t n=0;n<10;n++)
+    //    {
+    //        if (led_glow*2 >= n + 20)
+    //            lcd_lib_clear(0, 22+n*2, led_glow*2-n-20, 23+n*2);
+    //        if (led_glow*2 >= n)
+    //            lcd_lib_clear(led_glow*2 - n, 22+n*2, 127, 23+n*2);
+    //        else
+    //            lcd_lib_clear(0, 22+n*2, 127, 23+n*2);
+    //    }
     /*
     }else if (led_glow < 86) {
         led_glow--;
@@ -165,12 +165,12 @@ void lcd_menu_startup()
         //lcd_lib_clear_gfx(0, 22, ultimakerTextGfx);
         lcd_lib_draw_gfx(0, 22, ultimakerTextGfx);
     */
-    }else{
-        led_glow--;
+    //}else{
+    //    led_glow--;
         //lcd_lib_draw_gfx(80, 0, ultimakerRobotGfx);
         //lcd_lib_clear_gfx(0, 22, ultimakerTextOutlineGfx);
-        lcd_lib_draw_gfx(0, 22, ultimakerTextGfx);
-    }
+    //    lcd_lib_draw_gfx(0, 22, ultimakerTextGfx);
+    //}
     lcd_lib_update_screen();
 
     if (led_mode == LED_MODE_ALWAYS_ON)
@@ -203,9 +203,9 @@ static void lcd_menu_special_startup()
     LED_GLOW();
 
     lcd_lib_clear();
-    lcd_lib_draw_gfx(7, 12, specialStartupGfx);
+    //lcd_lib_draw_gfx(7, 12, specialStartupGfx);
     lcd_lib_draw_stringP(3, 2, PSTR("Welcome"));
-    lcd_lib_draw_string_centerP(47, PSTR("To the Ultimaker2"));
+    lcd_lib_draw_string_centerP(47, PSTR("To the Alekmaker2"));
     lcd_lib_draw_string_centerP(55, PSTR("experience!"));
     lcd_lib_update_screen();
 

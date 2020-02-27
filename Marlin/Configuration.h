@@ -166,7 +166,7 @@
 #define HEATER_0_MAXTEMP 275    // 275 C limit in Ultimaker 2 since the PTFE coupler degrades rapidly at higher temperatures.
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
-#define BED_MAXTEMP 130
+#define BED_MAXTEMP 135
 
 //Check if the heater heats up MAX_HEATING_TEMPERATURE_INCREASE within MAX_HEATING_CHECK_MILLIS while the PID was at the maximum.
 // If not, raise an error because most likely the heater is not heating up the temperature sensor. Indicating an issue in the system.
@@ -198,10 +198,10 @@
     //#define  DEFAULT_Ki 1.08
     //#define  DEFAULT_Kd 114
 
-// Ultimaker2
-    #define  DEFAULT_Kp 10.0
-    #define  DEFAULT_Ki 2.5
-    #define  DEFAULT_Kd 100.0
+// Alekmaker2+
+    #define  DEFAULT_Kp 12.19
+    #define  DEFAULT_Ki 1.00
+    #define  DEFAULT_Kd 37.24
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -247,10 +247,10 @@
 //    #define  DEFAULT_bedKi 1.41
 //    #define  DEFAULT_bedKd 1675.16
 
-//Ultimaker2
-    #define  DEFAULT_bedKp 124.55
-    #define  DEFAULT_bedKi 23.46
-    #define  DEFAULT_bedKd 165.29
+//Alekmaker2+
+    #define  DEFAULT_bedKp 58.18
+    #define  DEFAULT_bedKi 6.40
+    #define  DEFAULT_bedKd 132.26
 
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -322,7 +322,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define INVERT_X_DIR true     // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR true     // for Mendel set to false, for Orca set to true
-#define INVERT_E0_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
+#define INVERT_E0_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E1_DIR true    // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 
@@ -335,11 +335,11 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define min_software_endstops true // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 // Travel limits after homing
-#define X_MAX_POS 230
+#define X_MAX_POS 229
 #define X_MIN_POS 0
-#define Y_MAX_POS 224.5
+#define Y_MAX_POS 219
 #define Y_MIN_POS 0
-#define Z_MAX_POS 230
+#define Z_MAX_POS 215
 #define Z_MIN_POS 0
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
@@ -363,8 +363,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,200,282}  // default steps per unit for Ultimaker2
-#define DEFAULT_MAX_FEEDRATE          {300, 300, 40, 45}    // (mm/sec)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.0,80.0,200,99}  // default steps per unit for Ultimaker2
+#define DEFAULT_MAX_FEEDRATE          {300, 300, 30, 70}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000} // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          3000      // X, Y, Z and E max acceleration in mm/s^2 for printing moves
@@ -382,7 +382,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define DEFAULT_EJERK                 5.0       // (mm/sec)
 
 //Length of the bowden tube. Used for the material load/unload procedure.
-#define FILAMENT_BOWDEN_LENGTH        705
+#define FILAMENT_BOWDEN_LENGTH        800
 
 //===========================================================================
 //=============================Additional Features===========================
@@ -400,12 +400,12 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #define EEPROM_CHITCHAT
 
 // Preheat Constants
-#define PLA_PREHEAT_HOTEND_TEMP 180
+#define PLA_PREHEAT_HOTEND_TEMP 210
 #define PLA_PREHEAT_HPB_TEMP 70
 #define PLA_PREHEAT_FAN_SPEED 0     // Insert Value between 0 and 255
 
 #define ABS_PREHEAT_HOTEND_TEMP 240
-#define ABS_PREHEAT_HPB_TEMP 100
+#define ABS_PREHEAT_HPB_TEMP 110
 #define ABS_PREHEAT_FAN_SPEED 0     // Insert Value between 0 and 255
 
 //LCD and SD support
